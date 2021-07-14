@@ -8,7 +8,7 @@ namespace UserRegistration
         {
             Console.WriteLine("Welcome to User Registration!");
             UserRegistration user = new UserRegistration();
-            //Console.WriteLine("User registration");
+            
             Console.Write("enter First name:");
             string LasFirstName = Console.ReadLine();
             Console.Write("First name ");
@@ -20,6 +20,9 @@ namespace UserRegistration
             Console.WriteLine("Enter mail");
            string email= Console.ReadLine();
             user.EmailCheck("email");
+            Console.WriteLine("Enter  Mobile number");
+            string number = Console.ReadLine();
+            user.CheckMobileNumber("number");
         }
     }
 }
