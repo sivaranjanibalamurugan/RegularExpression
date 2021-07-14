@@ -41,7 +41,7 @@ namespace UserRegistration
 
         public void CheckMobileNumber(string number)
         {
-            string pattern = @"^[1-9]{2}\s[1-9][0-9]{9}$";
+            string pattern = "^[0-9][1-9]/s[1-9][0-9]{9}$";
             Regex regex = new Regex(pattern);
             if (regex.IsMatch(number))
             {

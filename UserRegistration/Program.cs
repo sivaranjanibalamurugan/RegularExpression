@@ -12,14 +12,14 @@ namespace UserRegistration
             Console.Write("enter First name:");
             string LasFirstName = Console.ReadLine();
             Console.Write("First name ");
-            user.CheckName("firstName");
+            user.CheckName("first Name");
             Console.Write("enter Last name:");
             string LastName = Console.ReadLine();
             Console.Write("Last name ");
             user.CheckName(LastName);
             Console.WriteLine("Enter mail");
-           string email= Console.ReadLine();
-            user.EmailCheck("email");
+            string mail = Console.ReadLine();
+            user.EmailCheck("mail");
             Console.WriteLine("Enter  Mobile number");
             string number = Console.ReadLine();
             user.CheckMobileNumber("number");
