@@ -22,5 +22,22 @@ namespace UserRegistration
                 Console.WriteLine("{0} is Invalid", name);
             }
         }
+
+        public void EmailCheck(string mail)
+        {
+            string pattern = @"^[a-zA-Z]{3}([\- \+ _\.][a-zA-Z0-9])*@[a-zA-Z]+\.[a-z]{2,3}";
+            Regex regex = new Regex(pattern);
+            {
+                if (regex.IsMatch(mail))
+                {
+                    Console.WriteLine("{0}-->Valid", mail);
+                }
+                else
+                {
+                    Console.WriteLine("{0}-->Invalid", mail);
+                }
+            }
+        }
+
     }
 }
