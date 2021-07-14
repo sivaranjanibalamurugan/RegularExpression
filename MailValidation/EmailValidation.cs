@@ -11,8 +11,8 @@ namespace MailValidation
     {
         public void EmailCheck()
         {
-            string pattern = @"^[a-zA-Z]{3}[a-zA-Z0-9]*";
-            string[] mail = { "xyz", "xyzabc8", "S" };
+            string pattern = @"^[a-zA-Z]{3}@[a-zA-Z0-9]+";
+            string[] mail = { "xyz@mail", "xyzabc8", "siv@gmail" };
             Regex regex = new Regex(pattern);
             for (int i = 0; i < mail.Length; i++)
             {
