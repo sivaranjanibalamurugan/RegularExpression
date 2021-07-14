@@ -13,6 +13,7 @@ namespace RegularExpression
         public void CheckPin(string pin)
         {
             string pattern = "^[1-9][0-9]{2}\\s{0,1}[0-9]{3}$";
+          
             Regex regex = new Regex(pattern);
             if (regex.IsMatch(pin))
             {
