@@ -54,7 +54,7 @@ namespace UserRegistration
         }
         public void CheckPassword(string password)
         {
-            string pattern = @"^[a-zA-Z0-9]{8}[a-zA-Z0-9]*";
+            string pattern = @"^(?=.*[A-Z])[a-zA-Z0-9]{8,20}$";
             Regex regex = new Regex(pattern);
             if(regex.IsMatch(password))
             {
@@ -65,5 +65,6 @@ namespace UserRegistration
                 Console.WriteLine("{0} is Invalid", password);
             }
         }
+       
     }
 }
