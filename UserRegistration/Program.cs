@@ -10,19 +10,20 @@ namespace UserRegistration
             UserRegistration user = new UserRegistration();
             
             Console.Write("enter First name:");
-            string LasFirstName = Console.ReadLine();
+            string FirstName = Console.ReadLine();
             Console.Write("First name ");
             user.CheckName("first Name");
             Console.Write("enter Last name:");
             string LastName = Console.ReadLine();
             Console.Write("Last name ");
             user.CheckName(LastName);
-            Console.WriteLine("Enter mail");
-            string mail = Console.ReadLine();
-            user.EmailCheck("mail");
-            Console.WriteLine("Enter  Mobile number");
-            string number = Console.ReadLine();
-            user.CheckMobileNumber("number");
+            Console.Write("Enter your Email id:");
+            string email = Console.ReadLine();
+            user.EmailCheck(email);
+            Console.Write("Enter your Mobile Number:");
+            string num = Console.ReadLine();
+            user.CheckMobileNumber(num);
+
         }
     }
 }

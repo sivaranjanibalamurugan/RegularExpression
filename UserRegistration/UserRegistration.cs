@@ -39,17 +39,30 @@ namespace UserRegistration
             }
         }
 
-        public void CheckMobileNumber(string number)
+        public void CheckMobileNumber(string num)
         {
-            string pattern = "^[0-9][1-9]/s[1-9][0-9]{9}$";
+            string pattern =@"^[1-9]{2}\s[1-9][0-9]{9}$";
             Regex regex = new Regex(pattern);
-            if (regex.IsMatch(number))
+            if (regex.IsMatch(num))
             {
-                Console.WriteLine("{0} is valid", number);
+                Console.WriteLine("{0} is valid", num);
             }
             else
             {
-                Console.WriteLine("{0} is invalid", number);
+                Console.WriteLine("{0} is invalid", num);
+            }
+        }
+        public void CheckPassword(string password)
+        {
+            string pattern = "^[a-zA-Z0-9]{8,16}$";
+            Regex regex = new Regex(pattern);
+            if(regex.IsMatch(password))
+            {
+                Console.WriteLine("{0} is valid", password);
+            }
+            else
+            {
+                Console.WriteLine("{0} is Invalid", password);
             }
         }
     }
