@@ -20,7 +20,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "1";
-            string name = "Jebakani";
+            string name = "Siva";
             //act
             string actual = userRegistration.CheckName(name);
             //assert
@@ -32,7 +32,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "0";
-            string name = "jeb7kani";
+            string name = "siva10";
             //act
             string actual = userRegistration.CheckName(name);
             //assert
@@ -61,7 +61,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "1";
-            string name = "Ishwarya";
+            string name = "Ranjani";
             //act
             string actual = userRegistration.CheckName(name);
             //assert
@@ -72,7 +72,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "1";
-            string name = "ishw7arya";
+            string name = "Ranjani10";
             //act
             string actual = userRegistration.CheckName(name);
             //assert
@@ -102,7 +102,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "1";
-            string emailId = "abc-100@yahoo.com";
+            string emailId = "www3@gmail.com";
             //act
             string actual = userRegistration.EmailCheck(emailId);
             //assert
@@ -113,7 +113,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "0";
-            string emailId = "vji-shwar@ya@gmail.com";
+            string emailId = "www-3@gmail.com";
             //act
             string actual = userRegistration.EmailCheck(emailId);
             //assert
@@ -136,7 +136,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "1";
-            string mobileNo = "91 7373377956";
+            string mobileNo = "91 8667361462";
             //act
             string actual = userRegistration.MobileNumberCheck(mobileNo);
             //assert
@@ -147,7 +147,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "0";
-            string mobileNo = "919826737645";
+            string mobileNo = "918667361462";
             //act
             string actual = userRegistration.MobileNumberCheck(mobileNo);
             //assert
@@ -158,7 +158,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "1";
-            string password = "Chan@748292";
+            string password = "Sivabalaan10";
             //act
             string actual = userRegistration.CheckPassword(password);
             //assert
@@ -169,7 +169,7 @@ namespace UserRegistrationTest
         {
             //Assign
             string expected = "0";
-            string password = "exo*w7)9qS";
+            string password = "Siv@balaan10";
             //act
             string actual = userRegistration.CheckPassword(password);
             //assert
@@ -199,11 +199,11 @@ namespace UserRegistrationTest
         [TestMethod]
         public void CheckForValidation()
         {
-            user.firstName = "Jebakani";
-            user.lastName = "Ishwarya";
+            user.firstName = "Siva";
+            user.lastName = "Ranjani";
             user.phoneNumber = "9908735627";
-            user.EmailAddress = "abc@gmail.com";
-            user.Password = "Exo@chanbaek21";
+            user.EmailAddress = "www@gmail.com";
+            user.Password = "Sivabalan10";
             string expected = "Satisfied all the validation";
             string actual = UserRegistration.TestUserRegistration(user);
             Assert.AreEqual(expected, actual);
@@ -214,11 +214,11 @@ namespace UserRegistrationTest
         [TestMethod]
         public void CheckForValidation1()
         {
-            user.firstName = "je";
-            user.lastName = "Ishwarya";
-            user.phoneNumber = "9908735627";
-            user.EmailAddress = "abc@gmail.com";
-            user.Password = "Exo@chanbaek21";
+            user.firstName = "siv";
+            user.lastName = "Ranjani";
+            user.phoneNumber = "8667361462";
+            user.EmailAddress = "www-3@gmail.com";
+            user.Password = "Siv@balan0";
             string expected = "First Name should be min of 3";
             string actual = UserRegistration.TestUserRegistration(user);
             Assert.AreEqual(expected, actual);
@@ -229,11 +229,11 @@ namespace UserRegistrationTest
         [TestMethod]
         public void CheckForValidation2()
         {
-            user.firstName = "Jebakani";
-            user.lastName = "Ishwarya";
-            user.phoneNumber = "99087356";
-            user.EmailAddress = "abc@gmail.com";
-            user.Password = "Exo@chanbaek21";
+            user.firstName = "Siva";
+            user.lastName = "Ranjani";
+            user.phoneNumber = "8667361462";
+            user.EmailAddress = "ww@gmail.com";
+            user.Password = "Sivabalaan10;
             string expected = "Phone number should exactly 10";
             string actual = UserRegistration.TestUserRegistration(user);
             Assert.AreEqual(expected, actual);
