@@ -8,25 +8,23 @@ namespace UserRegistration
         {
             Console.WriteLine("Welcome to User Registration!");
             UserRegistration user = new UserRegistration();
-            
-            Console.Write("enter First name:");
-            string FirstName = Console.ReadLine();
+            Console.Write("enter first name:");
+            string firstName = Console.ReadLine();
             Console.Write("First name ");
-            user.CheckName("first Name");
-            Console.Write("enter Last name:");
-            string LastName = Console.ReadLine();
+            user.CheckName(firstName);
+            Console.Write("enter last name:");
+            string lastName = Console.ReadLine();
             Console.Write("Last name ");
-            user.CheckName(LastName);
-            Console.Write("Enter your Email id:");
+            user.CheckName(lastName);
+            Console.Write("enter email:");
             string email = Console.ReadLine();
             user.EmailCheck(email);
-            Console.Write("Enter your Mobile Number:");
-            string num = Console.ReadLine();
-            user.CheckMobileNumber(num);
-            Console.Write("Enter the password:");
+            Console.Write("enter mobile number:");
+            string number = Console.ReadLine();
+            user.CheckMobileNumber(number);
+            Console.Write("enter password:");
             string password = Console.ReadLine();
             user.CheckPassword(password);
-
         }
     }
 }

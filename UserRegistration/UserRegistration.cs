@@ -131,28 +131,15 @@ namespace UserRegistration
         {
             //creating object for validation context and passing the validation class
             ValidationContext validationContext = new ValidationContext(userRegistration, null, null);
-            //store the resukt of validation in list
+            //store the result of validation in list
             List<ValidationResult> validationResults = new List<ValidationResult>();
-            //if all the result in lista re true 
+            //if all the result in list are true 
             bool valid = Validator.TryValidateObject(userRegistration, validationContext, validationResults, true);
             try
             {
-                //if any one is not valid then return the error message
-                if (!valid)
-                {
-                    foreach (ValidationResult i in validationResults)
-                    {
-                        return i.ErrorMessage;
-                    }
-                    return "No feild available";
-                }
-                //else return validation
-                //
-
-                else
-                {
-                    return "Satisfied all the validation";
-                }
+                // if valid print true or print false
+                string result = valid ? "True" : "False";
+                return result;
             }
             catch (Exception e)
             {
