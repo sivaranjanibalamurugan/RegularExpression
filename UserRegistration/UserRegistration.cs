@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UserRegistration
 {
-   public class UserRegistration
+    public class UserRegistration
     {
         public string CheckName(string name)
         {
@@ -137,9 +137,20 @@ namespace UserRegistration
             bool valid = Validator.TryValidateObject(userRegistration, validationContext, validationResults, true);
             try
             {
-                // if valid print true or print false
-                string result = valid ? "True" : "False";
-                return result;
+                //if any one is not valid then return the error message
+                if (!valid)
+                {
+                    foreach (ValidationResult i in validationResults)
+                    {
+                        return "Sad";
+                    }
+                    return "Sad";
+                }
+                //else return validation satisfied
+                else
+                {
+                    return "Happy";
+                }
             }
             catch (Exception e)
             {
@@ -147,6 +158,7 @@ namespace UserRegistration
             }
 
         }
+
     }
 }
 

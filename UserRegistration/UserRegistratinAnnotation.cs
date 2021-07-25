@@ -7,7 +7,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UserRegistration
 {
-
     public class UserRegistrationAnnotation
     {
         //required condition is the field should not be null
