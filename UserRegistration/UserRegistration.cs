@@ -142,23 +142,22 @@ namespace UserRegistration
                 {
                     foreach (ValidationResult i in validationResults)
                     {
-                        return i.ErrorMessage;
+                        //throwing invalid extry exception in custom exception class
+                        throw new CustomeException(CustomeException.ExceptionType.INVALID_ENTRY_EXCEPTION, "" + i.ToString());
                     }
-                    return "No feild available";
+                    throw new CustomeException(CustomeException.ExceptionType.NULL_FIELD_EXCEPTION, "No Field Found");
                 }
-                //else return validation
-                //
-
+                //else return validation satisfied
                 else
                 {
-                    return "Satisfied all the validation";
+                    return "Happy";
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 return e.Message;
             }
-
+            
         }
     }
 }
