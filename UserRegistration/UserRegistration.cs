@@ -138,19 +138,8 @@ namespace UserRegistration
             try
             {
                 //if any one is not valid then return the error message
-                if (!valid)
-                {
-                    foreach (ValidationResult i in validationResults)
-                    {
-                        return "Sad";
-                    }
-                    return "Sad";
-                }
-                //else return validation satisfied
-                else
-                {
-                    return "Happy";
-                }
+                string result = valid ? "Happy" : "Sad";
+                return result;
             }
             catch (Exception e)
             {
